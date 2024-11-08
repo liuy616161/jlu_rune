@@ -47,7 +47,7 @@ target_link_libraries(
 
 rclcpp_components_register_node(${PROJECT_NAME}
   PLUGIN power_rune::PowerRuneNode
-  EXECUTABLE armor_detector_node
+  EXECUTABLE power_rune_node
 )
 
 
@@ -57,5 +57,4 @@ rclcpp_components_register_node(${PROJECT_NAME}
 
 ament_auto_package(
   INSTALL_TO_SHARE
-  model
 )
