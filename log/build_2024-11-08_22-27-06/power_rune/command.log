@@ -1,2 +1,0 @@
-Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/tars-go/Downloads/rune/rm_power_rune-main -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tars-go/Downloads/rune/install/power_rune
-Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/tars-go/Downloads/rune/rm_power_rune-main -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tars-go/Downloads/rune/install/power_rune

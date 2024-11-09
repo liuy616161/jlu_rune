@@ -1,1 +1,0 @@
-Invoking command in '/home/tars-go/Downloads/rune/build/galaxy_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/tars-go/Downloads/rune/rm_vision_ros2_galaxy_camera-master -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tars-go/Downloads/rune/install/galaxy_camera

@@ -1,1 +1,0 @@
-/home/tars-go/Downloads/rune/build/power_rune/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

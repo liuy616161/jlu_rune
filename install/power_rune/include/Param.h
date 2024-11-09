@@ -1,1 +1,0 @@
-/home/tars-go/Downloads/rune/rm_power_rune-main/include/Param.h

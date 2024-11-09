@@ -1,1 +1,0 @@
-/home/tars-go/Downloads/rune/build/power_rune/ament_cmake_core/power_runeConfig.cmake

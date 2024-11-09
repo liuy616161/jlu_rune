@@ -1,7 +1,0 @@
-[01m[K/home/tars-go/Downloads/rune/rm_power_rune-main/src/power_rune_node.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Krpower_une_node.hpp: No such file or directory
-    4 | #include [01;31m[K"rpower_une_node.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/power_rune.dir/build.make:132: CMakeFiles/power_rune.dir/src/power_rune_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/power_rune.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
