@@ -1,0 +1,40 @@
+[0.008s] Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/tars-go/Downloads/rune/rm_power_rune-main -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tars-go/Downloads/rune/install/power_rune
+[0.080s] -- The C compiler identification is GNU 11.4.0
+[0.135s] -- The CXX compiler identification is GNU 11.4.0
+[0.143s] -- Detecting C compiler ABI info
+[0.178s] -- Detecting C compiler ABI info - done
+[0.184s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.184s] -- Detecting C compile features
+[0.185s] -- Detecting C compile features - done
+[0.187s] -- Detecting CXX compiler ABI info
+[0.227s] -- Detecting CXX compiler ABI info - done
+[0.237s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.237s] -- Detecting CXX compile features
+[0.238s] -- Detecting CXX compile features - done
+[0.240s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.327s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.367s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.394s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.398s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.438s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.438s] -- Found Threads: TRUE  
+[0.443s] -- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+[0.447s] -- Found required Ceres dependency: glog
+[0.447s] -- Found required Ceres dependency: gflags
+[0.448s] -- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+[0.512s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.515s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.521s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.530s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.544s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.590s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.593s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.652s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.671s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.703s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.000s] [31mCMake Error at CMakeLists.txt:35 (target_include_directories):
+[1.000s]   target_include_directories called with invalid arguments
+[1.000s] 
+[1.000s] [0m
+[1.008s] -- Configuring incomplete, errors occurred!
+[1.014s] Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/tars-go/Downloads/rune/rm_power_rune-main -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tars-go/Downloads/rune/install/power_rune

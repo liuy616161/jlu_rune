@@ -1,0 +1,40 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/galaxy_camera_node.dir/rclcpp_components/node_main_galaxy_camera_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/galaxy_camera.dir/src/galaxy_camera_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable galaxy_camera_node[0m
+[ 75%] Built target galaxy_camera_node
+[100%] [32m[1mLinking CXX shared library libgalaxy_camera.so[0m
+[100%] Built target galaxy_camera
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/0ffc4fc3a883ddffd0594f411358f79a5ebb60c6.cache
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/83d9e27abc6804c6cd0356cfdc6a22d538aab450.cache
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/GxGVTL.cti
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/GxU3VTL.cti
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/b3da2d902e089f59ad437d806f7e8a4346e9a3ef.cache
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/bc4b08373788f18282ff1e747a98dd6c21a8b629.cache
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/libgxiapi.so
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/galaxy_camera/galaxy_camera_node
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/library_path.sh
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/library_path.dsv
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/lib/libgalaxy_camera.so
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/config/camera_info.yaml
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/config/camera_params.yaml
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/launch/galaxy_camera.launch.py
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/ament_index/resource_index/package_run_dependencies/galaxy_camera
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/ament_index/resource_index/parent_prefix_path/galaxy_camera
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/ament_prefix_path.sh
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/path.sh
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/environment/path.dsv
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/local_setup.bash
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/local_setup.sh
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/local_setup.zsh
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/local_setup.dsv
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/package.dsv
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/ament_index/resource_index/packages/galaxy_camera
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/ament_index/resource_index/rclcpp_components/galaxy_camera
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/cmake/galaxy_cameraConfig.cmake
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/cmake/galaxy_cameraConfig-version.cmake
+-- Symlinking: /home/tars-go/Downloads/rune/install/galaxy_camera/share/galaxy_camera/package.xml

@@ -1,0 +1,4 @@
+Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/power_rune -- -j16 -l16
+Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/power_rune -- -j16 -l16
+Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/power_rune
+Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/power_rune

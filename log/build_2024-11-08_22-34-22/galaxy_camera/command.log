@@ -1,0 +1,4 @@
+Invoking command in '/home/tars-go/Downloads/rune/build/galaxy_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/galaxy_camera -- -j16 -l16
+Invoked command in '/home/tars-go/Downloads/rune/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/galaxy_camera -- -j16 -l16
+Invoking command in '/home/tars-go/Downloads/rune/build/galaxy_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/galaxy_camera
+Invoked command in '/home/tars-go/Downloads/rune/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/galaxy_camera

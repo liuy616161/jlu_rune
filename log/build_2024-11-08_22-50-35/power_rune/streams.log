@@ -1,0 +1,39 @@
+[0.009s] Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/power_rune -- -j16 -l16
+[0.025s] [ 25%] Built target power_rune_node
+[0.040s] [ 37%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/power_rune_node.cpp.o[0m
+[7.557s] [ 50%] [32m[1mLinking CXX shared library libpower_rune.so[0m
+[7.993s] [100%] Built target power_rune
+[7.996s] Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/tars-go/Downloads/rune/build/power_rune -- -j16 -l16
+[8.014s] Invoking command in '/home/tars-go/Downloads/rune/build/power_rune': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/power_rune
+[8.016s] -- Install configuration: ""
+[8.016s] -- Execute custom install script
+[8.016s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/lib/power_rune/power_rune_node
+[8.018s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/Calculator.h
+[8.019s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/Detector.h
+[8.020s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/Param.h
+[8.022s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/PowerRune.h
+[8.023s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/Utility.h
+[8.024s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/include/power_rune_node.hpp
+[8.025s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/library_path.sh
+[8.026s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/library_path.dsv
+[8.028s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/lib/libpower_rune.so
+[8.029s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/ament_index/resource_index/package_run_dependencies/power_rune
+[8.031s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/ament_index/resource_index/parent_prefix_path/power_rune
+[8.032s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/ament_prefix_path.sh
+[8.034s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/ament_prefix_path.dsv
+[8.035s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/path.sh
+[8.037s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/environment/path.dsv
+[8.038s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/local_setup.bash
+[8.039s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/local_setup.sh
+[8.040s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/local_setup.zsh
+[8.042s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/local_setup.dsv
+[8.043s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/package.dsv
+[8.044s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/ament_index/resource_index/packages/power_rune
+[8.046s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/ament_index/resource_index/rclcpp_components/power_rune
+[8.047s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.048s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.050s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/cmake/ament_cmake_export_libraries-extras.cmake
+[8.051s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/cmake/power_runeConfig.cmake
+[8.052s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/cmake/power_runeConfig-version.cmake
+[8.053s] -- Symlinking: /home/tars-go/Downloads/rune/install/power_rune/share/power_rune/package.xml
+[8.056s] Invoked command in '/home/tars-go/Downloads/rune/build/power_rune' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/tars-go/Downloads/rune/build/power_rune

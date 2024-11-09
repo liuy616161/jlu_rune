@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:35 (target_include_directories):
+  target_include_directories called with invalid arguments
+
+[0m

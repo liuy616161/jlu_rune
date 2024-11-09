@@ -1,0 +1,1 @@
+/home/tars-go/Downloads/rune/build/power_rune/ament_cmake_environment_hooks/local_setup.sh

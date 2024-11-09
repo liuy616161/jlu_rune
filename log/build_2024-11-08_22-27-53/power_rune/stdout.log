@@ -1,0 +1,25 @@
+-- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+-- Found required Ceres dependency: glog
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tars-go/Downloads/rune/build/power_rune
+[ 25%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/Calculate.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/power_rune_node.dir/rclcpp_components/node_main_power_rune_node.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/Detect.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/PowerRune.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/power_rune_node.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/power_rune.dir/src/Param.cpp.o[0m
+[ 87%] [32m[1mLinking CXX executable power_rune_node[0m
+[ 87%] Built target power_rune_node

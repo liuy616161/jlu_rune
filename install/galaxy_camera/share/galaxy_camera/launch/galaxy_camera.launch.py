@@ -1,0 +1,1 @@
+/home/tars-go/Downloads/rune/rm_vision_ros2_galaxy_camera-master/launch/galaxy_camera.launch.py
