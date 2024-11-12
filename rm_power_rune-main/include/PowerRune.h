@@ -5,7 +5,7 @@
 #include "Param.h"
 #include "Utility.h"
 
-#define CONFIG_PATH "../config.yaml"
+#define CONFIG_PATH "../config/config.yaml"
 
 namespace power_rune {
 

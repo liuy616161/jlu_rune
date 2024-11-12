@@ -7,6 +7,7 @@ Param::Param(const std::string& filename) { load(filename); }
 void Param::load(const std::string& filename) {
     cv::FileStorage fs(filename, cv::FileStorage::READ);
     // color
+    std::cout<<filename<<std::endl;
     std::string colorStr;
     fs["color"] >> colorStr;
     if (std::transform(colorStr.begin(), colorStr.end(), colorStr.begin(),
