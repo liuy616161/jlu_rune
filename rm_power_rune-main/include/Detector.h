@@ -111,8 +111,6 @@ class Detector {
     Detector();
     bool detect(const Frame& frame);
     void drawTargetPoint(const cv::Point2f& point);
-    inline void visualize() { cv::imshow("visualized", m_imageShow); }
-
     /**
      * @brief
      * 得到像素坐标系特征点，分别为装甲板内灯条的左上，右上，外灯条的中上，左下，右下，中心R。

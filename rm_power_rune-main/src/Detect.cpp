@@ -1,5 +1,9 @@
 #include "Detector.h"
-
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <opencv2/opencv.hpp>
+#include <image_transport/image_transport.hpp>
 namespace power_rune {
 
 std::mutex MUTEX;
@@ -83,14 +87,17 @@ void Detector::preprocess(const Frame& frame) {
                   cv::THRESH_BINARY);
     cv::threshold(temp, m_imageArmor, Param::ARMOR_BRIGHTNESS_THRESHOLD, Param::MAX_BRIGHTNESS,
                   cv::THRESH_BINARY);
+
+/*
 #if SHOW_IMAGE >= 3
+
     cv::imshow("arrow binary", m_imageArrow);
     cv::imshow("armor binary", m_imageArmor);
 #endif
+*/
     // 设置局部 roi
     m_localMask.setTo(0);
 }
-
 /**
  * @brief 寻找箭头，找到则返回 true，否则返回 false
  * @return true

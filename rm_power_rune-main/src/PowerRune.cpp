@@ -31,7 +31,8 @@ bool PowerRune::runOnce(const cv::Mat& image, double pitch, double yaw, double r
     if (result == true) {
         m_detector.drawTargetPoint(m_calculator.getPredictPixel());
     }
-    m_detector.visualize();
+    
+    //m_detector.visualize();
     char key = cv::waitKey(1);
     if (key == ' ') {
         cv::waitKey(0);

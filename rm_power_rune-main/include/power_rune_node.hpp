@@ -24,6 +24,13 @@ private:
 
     std::unique_ptr<PowerRune> power_rune_;
 
+    //debug show
+    image_transport::Publisher  image_show_pub_;
+    image_transport::Publisher  image_arrow_pub_;
+    image_transport::Publisher  image_armor_pub_;
+    rclcpp::TimerBase::SharedPtr debug_img_timer_;
+    
+    void publish_debug_img();
 
     // Camera info part
     rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr cam_info_sub_;
@@ -32,11 +39,10 @@ private:
 
     // Image subscrpition
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr img_sub_;
+
 };
 
 }
-
-
 #include "rclcpp_components/register_node_macro.hpp"
 
 RCLCPP_COMPONENTS_REGISTER_NODE(power_rune::PowerRuneNode)

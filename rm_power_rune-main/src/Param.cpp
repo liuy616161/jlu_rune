@@ -1,13 +1,18 @@
 #include "Param.h"
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 namespace power_rune {
 
 Param::Param(const std::string& filename) { load(filename); }
 
 void Param::load(const std::string& filename) {
-    cv::FileStorage fs(filename, cv::FileStorage::READ);
+
+    std::string package_share_path=ament_index_cpp::get_package_share_directory("power_rune");
+    std::string yaml_file=package_share_path+filename;
+
+    cv::FileStorage fs(yaml_file, cv::FileStorage::READ);
     // color
-    std::cout<<filename<<std::endl;
+    std::cout<<yaml_file<<std::endl;
     std::string colorStr;
     fs["color"] >> colorStr;
     if (std::transform(colorStr.begin(), colorStr.end(), colorStr.begin(),
