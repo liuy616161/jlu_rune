@@ -14,9 +14,9 @@ class PowerRune {
     PowerRune();
     bool runOnce(const cv::Mat& image, double pitch, double yaw, double roll = 0.0);
 
-    cv::Mat get_img_show(){return m_detector.m_imageShow;};
-    cv::Mat get_img_arrow(){return m_detector.m_imageArrow;};
-    cv::Mat get_img_armor(){return m_detector.m_imageArmor;};
+    cv::Mat get_img_show(){return m_detector.get_imgShow();}
+    cv::Mat get_img_arrow(){return m_detector.get_imgArrow();}
+    cv::Mat get_img_armor(){return m_detector.get_imgArmor();}
 
    private:
     Param m_param;

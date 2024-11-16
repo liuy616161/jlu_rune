@@ -21,6 +21,9 @@ find_package(ament_cmake_auto REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(Ceres REQUIRED)
+find_package(REQUIRED COMPONENTS
+  rclcpp
+  sensor_msgs)
 ament_auto_find_build_dependencies()
 
 

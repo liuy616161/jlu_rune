@@ -3,8 +3,8 @@ color: red
 mode: big
 fps: 30
 image:
-  width: 1280
-  height: 1024
+  width: 720
+  height: 540
 detect:
   brightness_threshold:
     blue: 
@@ -66,12 +66,14 @@ calculate:
     rows: 3
     cols: 3
     dt: d
-    data: [2479.79773265868, 0, 624.843541232562, 0, 2478.98595904058, 516.678095396654, 0, 0, 1]
+    data: [886.05773,   0.     , 341.95265,
+           0.     , 885.93814, 288.81655,
+           0.     ,   0.     ,   1.     ]
   distortion: !!opencv-matrix #Distortion
     rows: 5
     cols: 1
     dt: d  
-    data: [-0.0896322190932089, 0.486000473389527, 0, 0, 0]
+    data: [-0.216002, 0.182523, 0,  -0.000027, -0.000127]
   armor:
     outside:
       width: 345.5

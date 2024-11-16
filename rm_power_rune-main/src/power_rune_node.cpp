@@ -43,9 +43,9 @@ namespace power_rune{
             std::bind(&PowerRuneNode::imageCallback, this, std::placeholders::_1));
 
         #if SHOW_IMAGE>=1
-        image_show_pub_=image_transport::create_publisher(this,"img_show");
-        image_armor_pub_=image_transport::create_publisher(this,"img_armor");
-        image_arrow_pub_=image_transport::create_publisher(this,"img_arrow");
+        image_show_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_show",10);
+        image_armor_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_armor",10);
+        image_arrow_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_arrow",10);
         
         debug_img_timer_=this->create_wall_timer(
             std::chrono::milliseconds(100),
@@ -59,11 +59,11 @@ namespace power_rune{
     #if SHOW_IMAGE>=1
     void PowerRuneNode::publish_debug_img(){
         auto img_show_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", power_rune_->get_img_show()).toImageMsg();
-        image_show_pub_.publish(*img_show_msg);
-        auto img_arrow_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", power_rune_->get_img_arrow()).toImageMsg();
-        image_arrow_pub_.publish(*img_arrow_msg);
-        auto img_armor_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", power_rune_->get_img_armor()).toImageMsg();
-        image_armor_pub_.publish(*img_armor_msg);
+        image_show_pub_->publish(*img_show_msg);
+        auto img_arrow_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "mono8", power_rune_->get_img_arrow()).toImageMsg();
+        image_arrow_pub_->publish(*img_arrow_msg);
+        auto img_armor_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "mono8", power_rune_->get_img_armor()).toImageMsg();
+        image_armor_pub_->publish(*img_armor_msg);
     }
     #endif
 
@@ -71,10 +71,12 @@ namespace power_rune{
     {   
 
         auto img = cv_bridge::toCvShare(img_msg, "rgb8")->image;
-
+        cv::Mat imgbgr=img.clone();
         auto start{std::chrono::steady_clock::now()};
 
-        power_rune_->runOnce(img, 0.0, 0.0);
+        cv::cvtColor(imgbgr,imgbgr,cv::COLOR_RGB2BGR);
+
+        power_rune_->runOnce(imgbgr, 0.0, 0.0);
 
         auto future_time = start + std::chrono::milliseconds(1000 / power_rune::Param::FPS);
         if (std::chrono::steady_clock::now() < future_time) {

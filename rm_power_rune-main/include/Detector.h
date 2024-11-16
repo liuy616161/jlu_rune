@@ -121,6 +121,7 @@ class Detector {
                 m_armor.m_blOut, m_armor.m_brOut, m_centerR.m_center};
     }
 
+
    private:
     cv::Mat m_imageRaw;      // 原图
     cv::Mat m_imageArrow;    // 检测箭头用的二值化图片
@@ -155,6 +156,12 @@ class Detector {
               const cv::Rect2f& localRoi = cv::Rect2f(0, 0, Param::IMAGE_WIDTH, Param::IMAGE_HEIGHT));
     void draw(const cv::Point2f* points, const size_t size, const cv::Scalar& color, const int thickness = 1,
               const cv::Rect2f& localRoi = cv::Rect2f(0, 0, Param::IMAGE_WIDTH, Param::IMAGE_HEIGHT));
+
+    public:
+    cv::Mat get_imgShow(){return m_imageShow;}
+    cv::Mat get_imgArrow(){return m_imageArrow;}
+    cv::Mat get_imgArmor(){return m_imageArmor;}
+
 };
 
 }  // namespace power_rune

@@ -25,9 +25,9 @@ private:
     std::unique_ptr<PowerRune> power_rune_;
 
     //debug show
-    image_transport::Publisher  image_show_pub_;
-    image_transport::Publisher  image_arrow_pub_;
-    image_transport::Publisher  image_armor_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_show_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_arrow_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_armor_pub_;
     rclcpp::TimerBase::SharedPtr debug_img_timer_;
     
     void publish_debug_img();
