@@ -3,8 +3,8 @@ color: red
 mode: big
 fps: 30
 image:
-  width: 720
-  height: 540
+  width: 800
+  height: 600
 detect:
   brightness_threshold:
     blue: 
@@ -15,7 +15,7 @@ detect:
       armor: 90
   local_roi:
     distance_ratio: 1.2
-    width: 200
+    width: 100
   armor_center_vertical_distance_threshold: 90
   global_roi_length_ratio: 1.5
   arrow:

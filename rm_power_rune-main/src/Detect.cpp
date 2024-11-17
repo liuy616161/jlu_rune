@@ -159,6 +159,8 @@ void Detector::setLocalRoi() {
             if (point.y > m_globalRoi.height) {
                 point.y = m_globalRoi.height;
             }
+
+            std::cout<<"X:"<<point.x<<"    Y:"<<point.y<<std::endl;
         }
     }
     /**
@@ -178,6 +180,9 @@ void Detector::setLocalRoi() {
     // 调整 roi 不超过图像的边界
     resetRoi(m_armorRoi, m_globalRoi);
     resetRoi(m_centerRoi, m_globalRoi);
+    std::cout<<"m_globalRoi:"<<"   leftup:"<<m_globalRoi.tl()<<"   rightdown:"<<m_globalRoi.br()<<std::endl;
+    std::cout<<"m_armorRoi:"<<"   leftup:"<<m_armorRoi.tl()<<"   rightdown:"<<m_armorRoi.br()<<std::endl;
+    std::cout<<"m_centerRoi:"<<"   leftup:"<<m_centerRoi.tl()<<"   rightdown:"<<m_centerRoi.br()<<std::endl;
     // 如果上一帧中心 R 坐标不在中心 roi 中，则交换装甲板和中心 R 的 roi
     cv::Rect2f centerRoiGlobal{m_centerRoi.x + m_globalRoi.x, m_centerRoi.y + m_globalRoi.y,
                                m_centerRoi.width, m_centerRoi.height};

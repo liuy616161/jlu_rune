@@ -32,13 +32,13 @@ bool PowerRune::runOnce(const cv::Mat& image, double pitch, double yaw, double r
         m_detector.drawTargetPoint(m_calculator.getPredictPixel());
     }
     
-    //m_detector.visualize();
+    /*m_detector.visualize();
     char key = cv::waitKey(1);
     if (key == ' ') {
         cv::waitKey(0);
     } else if (key == 'q') {
         std::exit(1);
-    }
+    }*/
 #endif
     return result;
 }
