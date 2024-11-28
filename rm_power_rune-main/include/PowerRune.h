@@ -17,6 +17,7 @@ class PowerRune {
     cv::Mat get_img_show(){return m_detector.get_imgShow();}
     cv::Mat get_img_arrow(){return m_detector.get_imgArrow();}
     cv::Mat get_img_armor(){return m_detector.get_imgArmor();}
+    cv::Mat get_img_src(){return m_detector.get_imgsrc();}
 
    private:
     Param m_param;

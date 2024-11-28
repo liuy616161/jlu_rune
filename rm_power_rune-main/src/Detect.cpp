@@ -134,6 +134,8 @@ void Detector::setLocalRoi() {
     float y = distance * std::sin(angle2Radian(m_arrow.m_angle));
     cv::Point2f centerUp{m_arrow.m_center.x - m_globalRoi.x + x, m_arrow.m_center.y - m_globalRoi.y + y};
     cv::Point2f centerDown{m_arrow.m_center.x - x - m_globalRoi.x, m_arrow.m_center.y - m_globalRoi.y - y};
+    
+    
     /**
      * 用类似旋转矩形先与原图做掩码，可以减少箭头灯条在装甲板区域的个数，避免箭头灯条与装甲板连在一起从而误识别的情况
      * 家里的符箭头灯条和装甲板灯条亮度差距过大，导致装甲板区域如果存在箭头灯条的话，二值化后的图像所有箭头灯条会和装甲板内部灯条连在一起，导致特征识别失败
@@ -180,15 +182,25 @@ void Detector::setLocalRoi() {
     // 调整 roi 不超过图像的边界
     resetRoi(m_armorRoi, m_globalRoi);
     resetRoi(m_centerRoi, m_globalRoi);
+    std::cout<<"upArea:"<<rectUp.size.height*rectDown.size.width<<std::endl;
+    std::cout<<"DownArea:"<<rectDown.size.height*rectDown.size.width<<std::endl;
     std::cout<<"m_globalRoi:"<<"   leftup:"<<m_globalRoi.tl()<<"   rightdown:"<<m_globalRoi.br()<<std::endl;
     std::cout<<"m_armorRoi:"<<"   leftup:"<<m_armorRoi.tl()<<"   rightdown:"<<m_armorRoi.br()<<std::endl;
-    std::cout<<"m_centerRoi:"<<"   leftup:"<<m_centerRoi.tl()<<"   rightdown:"<<m_centerRoi.br()<<std::endl;
-    // 如果上一帧中心 R 坐标不在中心 roi 中，则交换装甲板和中心 R 的 roi
     cv::Rect2f centerRoiGlobal{m_centerRoi.x + m_globalRoi.x, m_centerRoi.y + m_globalRoi.y,
                                m_centerRoi.width, m_centerRoi.height};
     if (inRect(m_centerR.m_center, centerRoiGlobal) == false) {
         std::swap(m_armorRoi, m_centerRoi);
     }
+    //可写改源码，写rect2f的roi
+    target_rect.x = static_cast<int>(std::round(m_armorRoi.x));
+    target_rect.y = static_cast<int>(std::round(m_armorRoi.y));
+    target_rect.width = static_cast<int>(std::round(m_armorRoi.width));
+    target_rect.height = static_cast<int>(std::round(m_armorRoi.height));
+    std::cout<<"target_src:"<<"   leftup:"<<target_rect.tl()<<"   rightdown:"<<target_rect.br()<<std::endl;
+
+
+    m_armorBgr=m_imageRaw(target_rect).clone();
+
 #if SHOW_IMAGE >= 2
     draw(m_armorRoi, Param::YELLOW);
     draw(m_centerRoi, Param::DRAW_COLOR);
@@ -650,6 +662,29 @@ bool findCenterR(CenterR& center, const std::vector<Lightline>& lightlines, cons
  * @param[in] mat           图像
  */
 void resetRoi(cv::Rect2f& rect, const cv::Mat& mat) { resetRoi(rect, mat.rows, mat.cols); }
+
+
+/**
+ * @brief 根据图像的大小调整 roi 位置，使其不越界导致程序终止
+ * @param[in] rect          待调整的 roi
+ * @param[in] rect2f          global_roi
+ */
+void resetRoi(cv::Rect& rect,const cv::Rect2f& lastRoi) { 
+    int rows=lastRoi.height,cols=lastRoi.width;
+    // 调整左上角点的坐标
+    rect.x = rect.x < 0 ? 0 : rect.x >= cols ? cols - 1 : rect.x;
+    rect.y = rect.y < 0 ? 0 : rect.y >= rows ? rows - 1 : rect.y;
+    // 调整长宽
+    rect.width = rect.x + rect.width >= cols ? cols - rect.x - 1 : rect.width;
+    rect.height = rect.y + rect.height >= rows ? rows - rect.y - 1 : rect.height;
+    // 此时可能出现 width 或 height 小于 0 的情况，因此需要将其置为 0
+    if (rect.width < 0) {
+        rect.width = 0;
+    }
+    if (rect.height < 0) {
+        rect.height = 0;
+    }
+ }
 
 /**
  * @brief 根据图像的大小调整 roi 位置，使其不越界导致程序终止

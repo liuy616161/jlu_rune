@@ -1,21 +1,21 @@
 %YAML 1.2
 color: red
-mode: big
+mode: small
 fps: 30
 image:
-  width: 800
-  height: 600
+  width: 1440
+  height: 1200
 detect:
   brightness_threshold:
     blue: 
       arrow: 140
       armor: 110
     red:
-      arrow: 150
+      arrow: 145
       armor: 90
   local_roi:
     distance_ratio: 1.2
-    width: 100
+    width: 70
   armor_center_vertical_distance_threshold: 90
   global_roi_length_ratio: 1.5
   arrow:
@@ -35,7 +35,7 @@ detect:
   armor:
     lightline: 
       area:
-        min: 3000
+        min: 2000
         max: 30000
       contour_area:
         min: 500
@@ -47,7 +47,7 @@ detect:
       area_ratio_max: 3.3
       distance:
         min: 60
-        max: 110
+        max: 90
   centerR:
     area:
       min: 100

@@ -11,7 +11,7 @@ namespace power_rune {
  */
 #define SHOW_IMAGE 3
 
-#define CONSOLE_OUTPUT 3
+#define CONSOLE_OUTPUT 0
 
 struct Param {
     Param() = default;

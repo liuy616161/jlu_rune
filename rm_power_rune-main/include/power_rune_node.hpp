@@ -20,6 +20,13 @@ public:
     PowerRuneNode(const rclcpp::NodeOptions & options);
 private:
 
+      // 添加上次保存时间的成员变量
+    rclcpp::Time last_save_time_;
+    // 添加保存间隔的常量（1秒）
+    const double SAVE_INTERVAL = 1.0;  // 单位：秒
+    
+    
+
     void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr img_msg);
 
     std::unique_ptr<PowerRune> power_rune_;
@@ -28,6 +35,7 @@ private:
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_show_pub_;
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_arrow_pub_;
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_armor_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr  image_src_pub_;
     rclcpp::TimerBase::SharedPtr debug_img_timer_;
     
     void publish_debug_img();

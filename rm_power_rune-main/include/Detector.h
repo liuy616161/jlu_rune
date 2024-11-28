@@ -31,9 +31,12 @@ struct Lightline {
     double m_aspectRatio;              // 旋转矩形长宽比
 };
 
+
+
 /**
  * @brief 装甲板
  */
+ 
 struct Armor {
     Armor() = default;
     void set(const Lightline& l1, const Lightline& l2);
@@ -57,6 +60,7 @@ struct Armor {
 /**
  * @brief 中心 R
  */
+ 
 struct CenterR {
     CenterR() = default;
     void set(const Lightline& contour);
@@ -100,6 +104,7 @@ void resetRoi(cv::Rect2f& rect, int rows, int cols);
 double calAngleBetweenLightlines(const Lightline& l1, const Lightline& l2);
 void resetRoi(cv::Rect2f& rect, const cv::Mat& mat);
 void resetRoi(cv::Rect2f& rect, const cv::Rect2f& lastRoi);
+void resetRoi(cv::Rect& rect, const cv::Rect2f& lastRoi);
 void resetRoi(cv::Rect2f& rect, int rows, int cols);
 bool inRect(const cv::Point2f& point, const cv::Rect2f& rect);
 
@@ -127,11 +132,13 @@ class Detector {
     cv::Mat m_imageArrow;    // 检测箭头用的二值化图片
     cv::Mat m_imageArmor;    // 检测装甲板边框用的二值化图片
     cv::Mat m_imageCenter;   // 检测中心 R 用的二值化图片
+    cv::Mat m_armorBgr;
     cv::Mat m_imageShow;     // 可视化图片
     cv::Mat m_localMask;     // 局部 roi 的掩码
     cv::Rect2f m_globalRoi;  // 全局 roi ，用来圈定识别的范围，加快处理速度
     cv::Rect2f m_armorRoi;   // 装甲板 roi
     cv::Rect2f m_centerRoi;  // 中心 R roi
+    cv::Rect target_rect;
     Arrow m_arrow;           // 箭头
     Armor m_armor;           // 装甲板
     CenterR m_centerR;       // 中心 R
@@ -161,6 +168,7 @@ class Detector {
     cv::Mat get_imgShow(){return m_imageShow;}
     cv::Mat get_imgArrow(){return m_imageArrow;}
     cv::Mat get_imgArmor(){return m_imageArmor;}
+    cv::Mat get_imgsrc(){return m_armorBgr;}
 
 };
 

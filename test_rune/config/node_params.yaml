@@ -1,5 +1,5 @@
 /camera_node:
   ros__parameters:
-    exposure_time: 1800
+    exposure_time: 100
     gain: 14.0
     

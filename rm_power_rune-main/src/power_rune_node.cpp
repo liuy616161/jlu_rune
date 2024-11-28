@@ -7,7 +7,8 @@ namespace power_rune{
 
 
     PowerRuneNode::PowerRuneNode(const rclcpp::NodeOptions & options)
-    : Node("power_rune",options)
+    : Node("power_rune_node", options),
+      last_save_time_(this->now())
     {
         RCLCPP_INFO(this->get_logger(),"Starting PowerRuneNode !");
 
@@ -46,6 +47,7 @@ namespace power_rune{
         image_show_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_show",10);
         image_armor_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_armor",10);
         image_arrow_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_arrow",10);
+        image_src_pub_=this->create_publisher<sensor_msgs::msg::Image>("img_src",10);
         
         debug_img_timer_=this->create_wall_timer(
             std::chrono::milliseconds(100),
@@ -53,7 +55,7 @@ namespace power_rune{
         );
         #endif
 
-        
+        last_save_time_ = this->now();
     }
 
     #if SHOW_IMAGE>=1
@@ -64,6 +66,8 @@ namespace power_rune{
         image_arrow_pub_->publish(*img_arrow_msg);
         auto img_armor_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "mono8", power_rune_->get_img_armor()).toImageMsg();
         image_armor_pub_->publish(*img_armor_msg);
+        auto img_src_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", power_rune_->get_img_src()).toImageMsg();
+        image_src_pub_->publish(*img_src_msg);
     }
     #endif
 
@@ -82,7 +86,22 @@ namespace power_rune{
         if (std::chrono::steady_clock::now() < future_time) {
             std::this_thread::sleep_until(future_time);
         }    
-
+        //
+        
+        // 检查是否达到保存间隔
+        rclcpp::Time current_time = this->now();
+        if ((current_time - last_save_time_).seconds() >= SAVE_INTERVAL) {
+            static int frame_count = 0;
+            cv::Mat install = power_rune_->get_img_src().clone();
+            if (!install.empty()) {
+                //cv::cvtColor(install, install, cv::COLOR_BGR2RGB);
+                std::string filename = "/home/tars-go/Documents/src/frame_" + std::to_string(frame_count++) + ".png";
+                if (!cv::imwrite(filename, install)) {
+                    RCLCPP_WARN(this->get_logger(), "Failed to save image: %s", filename.c_str());
+                }
+                last_save_time_ = current_time;  // 更新上次保存时间
+            }
+        }
     }
 }
 
