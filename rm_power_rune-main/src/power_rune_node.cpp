@@ -89,7 +89,7 @@ namespace power_rune{
         //
         
         // 检查是否达到保存间隔
-        rclcpp::Time current_time = this->now();
+        /*rclcpp::Time current_time = this->now();
         if ((current_time - last_save_time_).seconds() >= SAVE_INTERVAL) {
             static int frame_count = 0;
             cv::Mat install = power_rune_->get_img_src().clone();
@@ -101,7 +101,7 @@ namespace power_rune{
                 }
                 last_save_time_ = current_time;  // 更新上次保存时间
             }
-        }
+        }*/
     }
 }
 
