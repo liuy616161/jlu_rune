@@ -64,3 +64,31 @@ ament_auto_package(
   INSTALL_TO_SHARE
   config
 )
+
+# 在power_rune的CMakeLists.txt中
+# 创建主库
+add_library(power_rune_detector
+  src/Detector.cpp
+  src/PowerRune.cpp
+  # 其他源文件...
+)
+
+# 安装头文件和库文件
+install(
+  DIRECTORY include/
+  DESTINATION include
+)
+
+install(
+  TARGETS power_rune_detector
+  EXPORT power_runeTargets
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
+
+# 导出相关信息
+ament_export_include_directories(include)
+ament_export_libraries(power_rune_detector)
+ament_export_targets(power_runeTargets)
